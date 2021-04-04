@@ -1,6 +1,6 @@
 {
   "name": "@zebbra/ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/lib.ssr.js",
   "browser": "dist/lib.esm.js",
@@ -18,7 +18,8 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "types": "tsc --project tsconfig.types.json"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
