@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "types"
-  },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src/hooks/index.ts"]
-}

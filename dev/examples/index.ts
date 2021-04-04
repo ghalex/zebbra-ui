@@ -1,0 +1,5 @@
+export { default as Buttons } from './Buttons.vue'
+export { default as Menus } from './Menus.vue'
+export { default as Radios } from './Radios.vue'
+export { default as Checkbox } from './Checkbox.vue'
+export { default as Inputs } from './Inputs.vue'

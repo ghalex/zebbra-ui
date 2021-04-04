@@ -19,6 +19,10 @@ export default defineComponent({
     class: {
       type: String,
       required: false
+    },
+    closeOnClick: {
+      type: Boolean,
+      default: true
     }
   },
   components: { Base },
@@ -38,7 +42,9 @@ export default defineComponent({
     })
 
     function handleClick() {
-      state.close()
+      if (props.closeOnClick) {
+        state.close()
+      }
     }
 
     return { allProps, isActive, handleClick }

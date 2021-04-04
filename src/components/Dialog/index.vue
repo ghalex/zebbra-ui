@@ -7,7 +7,6 @@
 <script lang="ts">
 import cs from 'classnames'
 import { defineComponent, computed, ref } from 'vue'
-// import { useOnOutsidePress } from 'vue-composable'
 import { useOutside } from '@/hooks'
 
 export default defineComponent({

@@ -6,6 +6,10 @@ interface MenuState {
   close: () => void
 }
 
+// interface MenuOptions {
+//   closeOnClick: boolean
+// }
+
 export default (): MenuState => {
   const state = reactive({
     isOpen: false,
