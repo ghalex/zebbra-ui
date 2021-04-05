@@ -1,18 +1,18 @@
 import { reactive } from 'vue'
 
-interface MenuState {
+export interface SelectState {
   isOpen: boolean
   open: () => void
   close: () => void
+  items: Map<any, any>
+  selected: null | any
 }
 
-// interface MenuOptions {
-//   closeOnClick: boolean
-// }
-
-export default (): MenuState => {
+export default (): SelectState => {
   const state = reactive({
     isOpen: false,
+    selected: null,
+    items: new Map(),
     open: () => {
       state.isOpen = true
     },

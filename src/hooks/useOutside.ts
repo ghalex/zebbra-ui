@@ -15,7 +15,6 @@ export default (el: any, exclude: any[], handler: () => void): any => {
     // We check to see if the clicked element is not
     // the dialog element and not excluded
     if (!el.value.contains(e.target) && !clickedOnExcludedEl) {
-      console.log('clicked outside')
       handler()
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <Base v-bind="allProps" class="z-input" />
+  <Base v-bind="allProps" class="z-input" :value="modelValue" @input="handleChange" />
 </template>
 
 <script lang="ts">
@@ -12,10 +12,14 @@ export default defineComponent({
     as: {
       type: String,
       default: 'input'
+    },
+    modelValue: {
+      type: String,
+      required: false
     }
   },
   components: { Base },
-  setup(props, { attrs }) {
+  setup(props, { attrs, emit }) {
     const allProps = computed(() => {
       const p: any = {
         ...attrs,
@@ -31,7 +35,10 @@ export default defineComponent({
       return p
     })
 
-    return { allProps }
+    function handleChange(e: any) {
+      emit('update:modelValue', e.target.value)
+    }
+    return { allProps, handleChange }
   }
 })
 </script>

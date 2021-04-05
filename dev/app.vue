@@ -9,14 +9,13 @@
     <div class="p-4">
       <Radios />
     </div>
-
     <div class="p-4">
       <Menus />
     </div>
-
     <div class="p-4">
       <Inputs />
     </div>
+    <div class="p-4"><Selects /></div>
   </div>
 </template>
 
