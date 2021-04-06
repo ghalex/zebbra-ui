@@ -1,6 +1,6 @@
 {
   "name": "@zebbra/ui",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "",
   "main": "dist/lib.ssr.js",
   "browser": "dist/lib.esm.js",
@@ -10,7 +10,8 @@
   "files": [
     "dist/*",
     "lib.d.ts",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/**/*.ts"
   ],
   "sideEffects": false,
   "scripts": {

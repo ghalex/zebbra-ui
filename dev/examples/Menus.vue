@@ -1,7 +1,7 @@
 <template>
   <div class="flex border p-3">
-    <zb-menu :state="state1">
-      <zb-menu-button as="ZbButton" class="flex">
+    <zb-menu class="flex-1" :state="state1">
+      <zb-menu-button as="ZbButton" class="flex px-0 w-full">
         <span>Open menu</span>
         <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor">
           <path

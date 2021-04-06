@@ -1,5 +1,5 @@
 <template>
-  <div ref="menu" v-bind="allProps"><slot /></div>
+  <div v-bind="allProps" ref="menu"><slot /></div>
 </template>
 
 <script lang="ts">

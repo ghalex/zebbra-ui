@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted } from '@vue/runtime-core'
+import { onMounted, onUnmounted } from 'vue'
 
 export default (el: any, exclude: any[], handler: () => void): any => {
   function handleOutsideClick(e: Event) {
@@ -15,6 +15,7 @@ export default (el: any, exclude: any[], handler: () => void): any => {
     // We check to see if the clicked element is not
     // the dialog element and not excluded
     if (!el.value.contains(e.target) && !clickedOnExcludedEl) {
+      console.log('click outside')
       handler()
     }
   }
