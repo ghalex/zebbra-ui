@@ -1,6 +1,6 @@
 {
   "name": "@zebbra/ui",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "main": "dist/lib.ssr.js",
   "browser": "dist/lib.esm.js",

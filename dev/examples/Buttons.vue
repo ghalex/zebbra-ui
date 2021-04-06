@@ -1,8 +1,9 @@
 <template>
   <div class="flex border p-3">
     <ZbButton>Click me</ZbButton>
-    <ZbButton class="primary ml-1">Click me</ZbButton>
+    <ZbButton class="primary loading ml-1">Click me</ZbButton>
     <ZbButton class="success ml-1">Click me</ZbButton>
+    <ZbButton class="success loading ml-1">Loading</ZbButton>
   </div>
 </template>
 
