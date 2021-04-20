@@ -14,8 +14,7 @@ export default (el: any, exclude: any[], handler: () => void): any => {
 
     // We check to see if the clicked element is not
     // the dialog element and not excluded
-    if (!el.value.contains(e.target) && !clickedOnExcludedEl) {
-      console.log('click outside')
+    if (el.value && !el.value.contains(e.target) && !clickedOnExcludedEl) {
       handler()
     }
   }
@@ -23,6 +22,8 @@ export default (el: any, exclude: any[], handler: () => void): any => {
   onMounted(() => {
     document.addEventListener('click', handleOutsideClick)
     document.addEventListener('touchstart', handleOutsideClick)
+
+    console.log(el.value)
   })
 
   onUnmounted(() => {

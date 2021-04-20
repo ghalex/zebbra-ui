@@ -42,6 +42,10 @@ export default defineComponent({
       props.state.close()
     })
 
+    // watch(menu, () => {
+    //   console.log(menu.value)
+    // })
+
     provide('menu-state', props.state)
 
     return { allProps, menu }

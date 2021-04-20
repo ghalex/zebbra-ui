@@ -1,6 +1,6 @@
 <template>
   <Teleport to="#teleport">
-    <div v-if="state.isOpen" ref="dialog" v-bind="allProps"><slot /></div>
+    <div v-bind="allProps" v-if="state.isOpen" ref="dialogRef"><slot /></div>
   </Teleport>
 </template>
 
@@ -28,7 +28,7 @@ export default defineComponent({
     }
   },
   setup(props, { attrs }) {
-    const dialog = ref(null)
+    const dialogRef = ref(null)
 
     const allProps = computed(() => {
       const p: any = {
@@ -49,13 +49,14 @@ export default defineComponent({
       return p
     })
 
-    useOutside(dialog, [], () => {
-      if (props.state && props.autoClose) {
+    const elements = document.getElementsByClassName('z-dialog-disclosure')
+    useOutside(dialogRef, elements as any, () => {
+      if (props.state && props.autoClose && props.state.isOpen) {
         props.state.close()
       }
     })
 
-    return { allProps, dialog }
+    return { allProps, dialogRef }
   }
 })
 </script>
