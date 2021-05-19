@@ -6,7 +6,7 @@
     <div class="p-4">
       <Dialogs />
     </div>
-    <!-- <div class="p-4">
+    <div class="p-4">
       <Buttons />
     </div>
     <div class="p-4">
@@ -18,7 +18,7 @@
     <div class="p-4">
       <Inputs />
     </div>
-    <div class="p-4"><Selects /></div> -->
+    <div class="p-4"><Selects /></div>
   </div>
 </template>
 
